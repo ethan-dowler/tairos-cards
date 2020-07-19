@@ -1,6 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (6.0.3.2)
+      activesupport (= 6.0.3.2)
+    activesupport (6.0.3.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
     cairo (1.16.5)
       native-package-installer (>= 1.0.3)
       pkg-config (>= 1.2.2)
@@ -8,6 +16,7 @@ GEM
       cairo (>= 1.16.2)
       glib2 (= 3.4.3)
     classy_hash (0.2.1)
+    concurrent-ruby (1.1.6)
     gdk_pixbuf2 (3.4.3)
       gio2 (= 3.4.3)
     gio2 (3.4.3)
@@ -18,8 +27,11 @@ GEM
     gobject-introspection (3.4.3)
       glib2 (= 3.4.3)
     highline (2.0.2)
+    i18n (1.8.3)
+      concurrent-ruby (~> 1.0)
     mercenary (0.3.6)
     mini_portile2 (2.4.0)
+    minitest (5.14.1)
     native-package-installer (1.0.9)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
@@ -27,6 +39,7 @@ GEM
       cairo-gobject (= 3.4.3)
       gobject-introspection (= 3.4.3)
     pkg-config (1.4.1)
+    rake (13.0.1)
     roo (2.8.2)
       nokogiri (~> 1)
       rubyzip (>= 1.2.1, < 2.0.0)
@@ -47,11 +60,17 @@ GEM
       roo (= 2.8.2)
       rsvg2 (~> 3.4)
       ruby-progressbar (~> 1.10)
+    thread_safe (0.3.6)
+    tzinfo (1.2.7)
+      thread_safe (~> 0.1)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel
+  rake
   squib
 
 BUNDLED WITH
