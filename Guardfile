@@ -1,7 +1,5 @@
-group :characters do
-  guard 'rake', task: :deck do   # when triggered, run "rake characters"
-    watch %r{deck.rb}  # a regular expression that matches our file
-    watch %r{.*\.svg}            # Any svg file, anywhere
-    watch %r{.*\.yml}            # Any yml file, anywhere
-  end
+guard 'rake', task: :deck do   # when triggered, run "rake deck"
+  watch %r{deck.rb}            # the file that builds the deck
+  watch %r{.*\.svg}            # Any svg file, anywhere
+  watch %r{.*\.yml}            # Any yml file, anywhere
 end

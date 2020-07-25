@@ -5,5 +5,5 @@ task :deck do
 end
 
 task :guard do
-  sh "bundle exec guard -g deck"
+  sh "bundle exec guard -c"
 end
