@@ -1,3 +1,5 @@
+require "active_model"
+
 class Card
   include ActiveModel::Model
 
