@@ -1,0 +1,13 @@
+all_text: &all_text
+  color: black
+  x: 0.375in
+  width: 2in
+  align: center
+
+title_text:
+  <<: *all_text
+  font: 'ChunkFive Roman,Sans 24'
+
+body_text:
+  <<: *all_text
+  font: 'ChunkFive Roman,Sans 16'
