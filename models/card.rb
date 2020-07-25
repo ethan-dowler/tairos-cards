@@ -4,6 +4,9 @@ class Card
   attr_accessor *%i(
     title
     image
-    body
+    line1
+    line2
+    line3
+    line4
   )
 end
