@@ -1,7 +1,7 @@
 task default: [:latest]
 
 task :latest do
-  load 'templates/vertical.rb'
+  load 'templates/mtg.rb'
 end
 
 # card template for MtG-inspired design
