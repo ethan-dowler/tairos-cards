@@ -1,0 +1,18 @@
+all: &all
+  markup: true
+  color: black
+  x: 9mm
+  width: 51mm
+  align: left
+
+title:
+  <<: *all
+  font: 'Sans 12'
+
+type:
+  <<: *all
+  font: 'Sans Italic 10'
+
+body:
+  <<: *all
+  font: 'Sans 10'
