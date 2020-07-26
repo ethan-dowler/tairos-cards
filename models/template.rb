@@ -10,9 +10,11 @@ module Template
     def bleed
       @bleed ||= dsl.mm(3)
     end
+
     def width
       @width ||= Card.width + (bleed * 2)
     end
+
     def height
       @height ||= Card.height + (bleed * 2)
     end

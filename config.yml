@@ -5,7 +5,7 @@ antialias: best
 
 # Text hints are used to show the boundaries of text boxes.
 # Can be enabled/disabled at the command-level, or set globally with `set`
-# text_hint: '#ccc'
+# text_hint: '#bbb'
 
 # Show progress bars on the command line for potentially long-running operations
 progress_bars: true

@@ -1,8 +1,8 @@
 all: &all
   markup: true
   color: black
-  x: 0.25in
-  width: 2.25in
+  x: 6mm
+  width: 58mm
   align: center
 
 title:
