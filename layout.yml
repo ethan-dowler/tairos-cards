@@ -1,13 +1,18 @@
 all_text: &all_text
+  markup: true
   color: black
-  x: 0.375in
-  width: 2in
+  x: 0.25in
+  width: 2.25in
   align: center
 
 title_text:
   <<: *all_text
-  font: 'ChunkFive Roman,Sans 24'
+  font: 'Sans 22'
+
+type_text:
+  <<: *all_text
+  font: 'Sans Italic 12'
 
 body_text:
   <<: *all_text
-  font: 'ChunkFive Roman,Sans 16'
+  font: 'Sans 12'
