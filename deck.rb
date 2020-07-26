@@ -1,55 +1,84 @@
-require "active_model"
-require "game_icons"
 require "squib"
 
 require_relative "models/card"
 
 # icons from game-icons.net
 # TODO: make this work with Guard
-CARDS = [
+cards = [
   Card.new(
     title: "Strike",
-    image: "images/guardian/battle-axe.svg",
-    body:  "Deal 3 damage."
+    type: "Reaction",
+    image: "guardian/battle-axe.svg",
+    line1: "Deal 3 damage.",
+    line2: "If you <i>Strike</i> an enemy",
+    line3: "who damaged you this",
+    line4: "Round, deal 5 instead.",
   ),
-  Card.new(
-    title: "Block",
-    image: "images/guardian/round-shield.svg",
-    body:  "Prevent 2 damage."
-  )
 ]
 
+# can only access the #inches function on an instance of Deck
 deck_dsl = Squib::Deck.new
+
 card_width = deck_dsl.inches(2.5)
 card_height = deck_dsl.inches(3.5)
-bleed = deck_dsl.inches(0.125)
 
+bleed = deck_dsl.inches(0.125)
 template_width = card_width + (bleed * 2)
 template_height = card_height + (bleed * 2)
 
-Squib::Deck.new(cards: CARDS.length, width: template_width, height: template_height) do
+Squib::Deck.new(
+  cards: cards.length,
+  width: template_width,
+  height: template_height,
+  layout: 'layout.yml'
+) do
   background color: :white
 
+  # show the cutline as a dashed line
   rect x: bleed,
        y: bleed,
        width: card_width,
        height: card_height,
        dash: 5
 
-  text str: CARDS.map(&:title),
-       color: :black,
-       font: 'ChunkFive Roman,Sans 24',
-       x: bleed,
-       y: bleed + 100,
-       width: card_width,
-       align: :center
+  # The name of the card
+  text str: cards.map(&:title),
+       layout: :title_text,
+       y: bleed + inches(0.2)
+  
+  # Card Type
+  text str: cards.map(&:type),
+       layout: :type_text,
+       y: bleed + inches(0.55)
 
-  image_size = inches(1.5)
-  svg file: CARDS.map(&:image),
+  # The image/icon of the card
+  image_size = inches(1.2)
+  svg file: cards.map(&:image),
     width: image_size,
     height: image_size,
     x: bleed + (card_width - image_size) / 2,
-    y: bleed + inches(0.65)
+    y: bleed + inches(0.85)
+
+  # The body text of the card (in 4 lines or less!)
+  body_y = bleed + inches(2.25)
+  first_line_y = bleed + inches(2.25)
+  space_between_lines = inches(0.25)
+
+  text str: cards.map(&:line1),
+    layout: :body_text,
+    y: first_line_y
+
+  text str: cards.map(&:line2),
+    layout: :body_text,
+    y: first_line_y + (space_between_lines)
+
+    text str: cards.map(&:line3),
+    layout: :body_text,
+    y: first_line_y + (space_between_lines * 2)
+
+    text str: cards.map(&:line4),
+    layout: :body_text,
+    y: first_line_y + (space_between_lines * 3)
 
   save_png
 end
