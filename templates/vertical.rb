@@ -1,7 +1,7 @@
 require_relative "base"
 
 # need to load cards to local var to allow hotloading while using guard
-cards = YAML.load(File.read("data/cards.yml")).map { |card| Card.new(**card) }
+cards = YAML.load(File.read("data/vertical.yml")).map { |card| Card.new(**card) }
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/vertical.yml", cards: cards.length) do
   background color: :white

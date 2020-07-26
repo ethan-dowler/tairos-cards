@@ -1,0 +1,11 @@
+# Guardian
+-
+  :title: "Strike"
+  :type: "Action"
+  :image: "guardian/battle-axe.svg"
+  :line1: "Deal 3 damage."
+  :line2: ""
+  :line3: "If you <i>Strike</i> an enemy"
+  :line4: "who damaged you this"
+  :line5: "Round, deal 5 instead."
+  :line6: ""

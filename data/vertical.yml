@@ -1,7 +1,7 @@
 # Guardian
 -
   :title: "Strike"
-  :type: "Reaction"
+  :type: "Action"
   :image: "guardian/battle-axe.svg"
   :line1: "Deal 3 damage."
   :line2: "If you <i>Strike</i> an enemy"
