@@ -15,7 +15,7 @@ bundle install
 Generate the cards:
 
 ```
-rake deck
+rake
 ```
 
 The card images will be output in the `_output` directory.

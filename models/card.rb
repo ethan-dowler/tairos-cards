@@ -1,4 +1,5 @@
 require "active_model"
+require "squib"
 
 class Card
   include ActiveModel::Model
@@ -12,4 +13,18 @@ class Card
     line3
     line4
   )
+
+  class << self
+    def dsl
+      dsl ||= Squib::Deck.new
+    end
+
+    def width
+      @width ||= dsl.inches(2.5)
+    end
+
+    def height
+      @height ||= dsl.inches(3.5)
+    end
+  end
 end

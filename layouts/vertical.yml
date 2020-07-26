@@ -1,18 +1,18 @@
-all_text: &all_text
+all: &all
   markup: true
   color: black
   x: 0.25in
   width: 2.25in
   align: center
 
-title_text:
-  <<: *all_text
+title:
+  <<: *all
   font: 'Sans 22'
 
-type_text:
-  <<: *all_text
+type:
+  <<: *all
   font: 'Sans Italic 12'
 
-body_text:
-  <<: *all_text
+body:
+  <<: *all
   font: 'Sans 12'
