@@ -10,25 +10,26 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/vertical.yml", cards: cards.len
   rect **CUTLINE_OPTIONS
 
   # The name of the card
-  text str: cards.map(&:title), layout: :title,
-       y: Template.bleed + inches(0.2)
+  text layout: :title,
+       str: cards.map(&:title),
+       y: Template.bleed + mm(5)
   
   # Action/Reaction
-  text str: cards.map(&:type), layout: :type,
-       y: Template.bleed + inches(0.55)
+  text layout: :type,
+       str: cards.map(&:type),
+       y: Template.bleed + mm(14)
 
   # The image/icon of the card
-  image_size = inches(1.2)
+  image_size = mm(30)
   svg file: cards.map(&:image),
-    width: image_size,
-    height: image_size,
-    x: Template.bleed + (Card.width - image_size) / 2,
-    y: Template.bleed + inches(0.85)
+      width: image_size,
+      height: image_size,
+      x: Template.bleed + (Card.width - image_size) / 2,
+      y: Template.bleed + mm(22)
 
   # The body text of the card (in 4 lines or less!)
-  body_y = Template.bleed + inches(2.25)
-  first_line_y = Template.bleed + inches(2.25)
-  space_between_lines = inches(0.25)
+  first_line_y = Template.bleed + mm(56)
+  space_between_lines = mm(6)
 
   text layout: :body,
        str: cards.map(&:line1),

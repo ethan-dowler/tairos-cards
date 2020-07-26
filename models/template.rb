@@ -8,7 +8,7 @@ module Template
     end
 
     def bleed
-      @bleed ||= dsl.inches(0.125)
+      @bleed ||= dsl.mm(3)
     end
     def width
       @width ||= Card.width + (bleed * 2)
