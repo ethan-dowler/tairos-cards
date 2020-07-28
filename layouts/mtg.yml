@@ -7,7 +7,7 @@ all: &all
 
 title:
   <<: *all
-  font: 'Sans 12'
+  font: 'Sans Semibold 12'
 
 type:
   <<: *all
