@@ -8,6 +8,7 @@ class Card
     title
     type
     image
+    border_color
     line1
     line2
     line3

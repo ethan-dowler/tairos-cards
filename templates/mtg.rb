@@ -4,7 +4,7 @@ require_relative "base"
 cards = YAML.load(File.read("data/mtg.yml")).map { |card| Card.new(**card) }
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) do
-  background color: :light_gray
+  background color: cards.map(&:border_color)
 
   border_width = mm(3)
   border = Template.bleed + border_width
@@ -33,6 +33,11 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) 
        str: cards.map(&:type),
        y: buffer,
        align: :right
+
+  line x1: buffer,
+       x2: Template.width - buffer,
+       y1: mm(14),
+       y2: mm(14)
   
   
   ## IMAGE
@@ -41,10 +46,16 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) 
     width: image_size,
     height: image_size,
     x: (Card.width + border_width - image_size) / 2,
-    y: mm(16)
+    y: mm(18)
+
+
+  line x1: buffer,
+      x2: Template.width - buffer,
+      y1: mm(56),
+      y2: mm(56)
 
   ## BODY
-  first_line_y = mm(56)
+  first_line_y = mm(58)
   space_between_lines = mm(5)
   
   text layout: :body,
