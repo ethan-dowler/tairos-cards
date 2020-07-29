@@ -82,5 +82,5 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) 
        str: cards.map(&:line6),
        y: first_line_y + (space_between_lines * 5)
 
-  save_png prefix: "mtg_"
+  save_png prefix: cards.map(&:deck), count_format: cards.map(&:title)
 end
