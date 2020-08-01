@@ -1,7 +1,10 @@
 require_relative "base"
 
 # need to load cards to local var to allow hotloading while using guard
-cards = YAML.load(File.read("data/mtg.yml")).map { |card| Card.new(**card) }
+player_cards = YAML.load(File.read("data/player_decks.yml")).map { |card| Card.new(**card) }
+enemy_cards = YAML.load(File.read("data/enemy_deck.yml")).map { |card| Card.new(**card) }
+
+cards = player_cards
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) do
   background color: cards.map(&:border_color)
@@ -40,12 +43,16 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) 
        y2: mm(14)
   
   
-  ## IMAGE
-  image_size = mm(32)
-  svg file: cards.map(&:image),
-    width: image_size,
-    height: image_size,
-    x: (Card.width + border_width - image_size) / 2,
+  ## CENTER ICON
+  icons = cards.map do |card|
+    GameIcons.get(card.icon).recolor(fg: '000', bg: 'fff').string
+  end
+
+  icon_size = mm(32)
+  svg data: icons,
+    width: icon_size,
+    height: icon_size,
+    x: (Card.width + border_width - icon_size) / 2,
     y: mm(18)
 
 

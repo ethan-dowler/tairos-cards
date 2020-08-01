@@ -8,7 +8,7 @@ class Card
     deck
     title
     type
-    image
+    icon
     border_color
     line1
     line2

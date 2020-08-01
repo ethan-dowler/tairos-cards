@@ -1,3 +1,4 @@
+require "game_icons"
 require "squib"
 
 require_relative "../models/card"
