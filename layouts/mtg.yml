@@ -16,3 +16,15 @@ type:
 body:
   <<: *all
   font: 'Sans 10'
+
+monster_stats: &monster_stats
+  <<: *all
+  font: 'Sans Semibold 18'
+  y: 79mm
+
+hp:
+  <<: *monster_stats
+
+attack:
+  <<: *monster_stats
+  align: right

@@ -20,8 +20,8 @@
   :line1: "Prevent up to 2 damage from"
   :line2: "an enemy attack."
   :line3: ""
-  :line4: "If you <i>Block</i> a <b>Forced Attack</b>,"
-  :line5: "you are attacked instead"
+  :line4: "If you <i>Block</i> a <b>Hunter</b> attack,"
+  :line5: "you are attacked instead,"
   :line6: "and you gain <b>Inspiration</b>."
 -
   :deck: "Guardian"

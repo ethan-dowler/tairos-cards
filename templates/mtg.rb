@@ -4,7 +4,7 @@ require_relative "base"
 player_cards = YAML.load(File.read("data/player_decks.yml")).map { |card| OpenStruct.new(**card) }
 enemy_cards = YAML.load(File.read("data/enemy_deck.yml")).map { |card| OpenStruct.new(**card) }
 
-cards = player_cards
+cards = player_cards + enemy_cards
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) do
   background color: cards.map(&:border_color)
@@ -44,15 +44,15 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) 
   
   
   ## CENTER ICON
-  icons = cards.map do |card|
+  center_icons = cards.map do |card|
     GameIcons.get(card.icon).recolor(fg: '000', bg: 'fff').string
   end
 
-  icon_size = mm(32)
-  svg data: icons,
-    width: icon_size,
-    height: icon_size,
-    x: (Card.width + border_width - icon_size) / 2,
+  center_icon_size = mm(32)
+  svg data: center_icons,
+    width: center_icon_size,
+    height: center_icon_size,
+    x: (Card.width + border_width - center_icon_size) / 2,
     y: mm(18)
 
 
@@ -88,6 +88,10 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) 
   text layout: :body,
        str: cards.map(&:line6),
        y: first_line_y + (space_between_lines * 5)
+
+  # MONSTER ICONS (if applicable)
+  text layout: :hp, str: cards.map { |card| card.hp.nil? ? nil : "HP #{card.hp}" }
+  text layout: :attack, str: cards.map { |card| card.attack.nil? ? nil : "#{card.attack} ATK" }
 
   save_png prefix: cards.map(&:deck), count_format: cards.map(&:title)
 end
