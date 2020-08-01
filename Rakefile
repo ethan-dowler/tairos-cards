@@ -1,17 +1,8 @@
-task default: [:latest]
-
-task :latest do
-  load 'templates/mtg.rb'
-end
+task default: [:deck]
 
 # card template for MtG-inspired design
-task :mtg do
+task :deck do
   load 'templates/mtg.rb'
-end
-
-# card template for vertical design
-task :vertical do
-  load 'templates/vertical.rb'
 end
 
 task :guard do
