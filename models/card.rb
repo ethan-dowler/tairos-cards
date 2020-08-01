@@ -1,23 +1,6 @@
-require "active_model"
 require "squib"
 
-class Card
-  include ActiveModel::Model
-
-  attr_accessor *%i(
-    deck
-    title
-    type
-    icon
-    border_color
-    line1
-    line2
-    line3
-    line4
-    line5
-    line6
-  )
-
+module Card
   class << self
     def dsl
       dsl ||= Squib::Deck.new
