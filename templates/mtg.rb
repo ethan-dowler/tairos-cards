@@ -1,8 +1,8 @@
 require_relative "base"
 
 # need to load cards to local var to allow hotloading while using guard
-player_cards = YAML.load(File.read("data/player_decks.yml")).map { |card| OpenStruct.new(**card) }
-enemy_cards = YAML.load(File.read("data/enemy_deck.yml")).map { |card| OpenStruct.new(**card) }
+player_cards = YAML.load(File.read("data/player_cards.yml")).map { |card| OpenStruct.new(**card) }
+enemies = YAML.load(File.read("data/enemies.yml")).map { |card| OpenStruct.new(**card) }
 
 cards = player_cards + enemy_cards
 
