@@ -1,0 +1,57 @@
+# TODO: work on the colors : P
+-
+  :deck: Guardian
+  :background_color: "#b10"
+  :icon_color: "#fff"
+  :center_icon: battle-axe
+  :left_icon: checked-shield
+  :right_icon: shield-bash
+-
+  :deck: Ranger
+  :background_color: "#ccc"
+  :icon_color: "#111"
+  :center_icon: high-shot
+  :left_icon: dodging
+  :right_icon: wingfoot
+-
+  :deck: Elementalist
+  :background_color: "#0ff"
+  :icon_color: "#111"
+  :center_icon: electric
+  :left_icon: flamer
+  :right_icon: beveled-star
+-
+  :deck: Tactician
+  :background_color: "#492"
+  :icon_color: "#fff"
+  :center_icon: heart-plus
+  :left_icon: team-upgrade
+  :right_icon: explosive-meeting
+-
+  :deck: Brawler
+  :background_color: "#f31"
+  :icon_color: "#111"
+  :center_icon: punch-blast
+  :left_icon: charging-bull
+  :right_icon: thrust-bend
+-
+  :deck: Shadow
+  :background_color: "#666"
+  :icon_color: "#fff"
+  :center_icon: two-shadows
+  :left_icon: snake-tongue
+  :right_icon: avoidance
+-
+  :deck: Arcanist
+  :background_color: "#02f"
+  :icon_color: "#fff"
+  :center_icon: hypersonic-bolt
+  :left_icon: aura
+  :right_icon: glowing-hands
+-
+  :deck: Squite
+  :background_color: "#4d4"
+  :icon_color: "#111"
+  :center_icon: knapsack
+  :left_icon: ages
+  :right_icon: rapidshare-arrow

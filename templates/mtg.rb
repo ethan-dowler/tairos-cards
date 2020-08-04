@@ -96,5 +96,6 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/mtg.yml", cards: cards.length) 
   text layout: :hp, str: cards.map { |card| card.hp.nil? ? nil : "HP #{card.hp}" }
   text layout: :attack, str: cards.map { |card| card.attack.nil? ? nil : "#{card.attack} ATK" }
 
+  # SAVE
   save_png prefix: cards.map(&:deck), count_format: cards.map(&:title)
 end
