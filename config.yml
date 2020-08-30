@@ -14,5 +14,3 @@ progress_bars: true
 #custom_colors:
 #  foo: '#abc'
 
-# Image directory path
-img_dir: images

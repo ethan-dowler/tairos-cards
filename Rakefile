@@ -1,12 +1,23 @@
-task default: [:deck]
+task default: [:main]
 
-# card template for MtG-inspired design
-task :deck do
-  load 'templates/mtg.rb'
+task :main do
+  load 'templates/upgrade/main.rb'
 end
 
-task :card_backs do
-  load 'templates/card_back.rb'
+namespace :tairos do
+  task :main do
+    load 'templates/tairos/main.rb'
+  end
+  
+  task :card_backs do
+    load 'templates/tairos/card_back.rb'
+  end
+end
+
+namespace :upgrade do
+  task :main do
+    load 'templates/upgrade/main.rb'
+  end
 end
 
 task :guard do

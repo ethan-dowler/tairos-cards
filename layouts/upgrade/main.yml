@@ -1,0 +1,84 @@
+all: &all
+  markup: true
+  color: black
+  x: 9mm
+  width: 51mm
+  align: left
+
+stat_labels: &stat_labels
+  <<: *all
+  font: 'Sans 10'
+  y: 78mm
+
+stats: &stats
+  <<: *all
+  font: 'Sans Semibold 12'
+  y: 82mm
+
+title:
+  <<: *all
+  font: 'Sans Semibold 12'
+
+type:
+  <<: *all
+  font: 'Sans Italic 10'
+
+upgrade_points_label:
+  <<: *all
+  font: 'Sans 12'
+  y: 50mm
+  x: 9mm
+
+upgrade_points:
+  <<: *all
+  font: 'Sans 12'
+  y: 50mm
+  x: 16mm
+
+plus_points_label:
+  <<: *all
+  font: 'Sans 12'
+  y: 50mm
+  x: 49mm
+
+plus_points:
+  <<: *all
+  font: 'Sans 12'
+  y: 50mm
+  x: 56mm
+
+body:
+  <<: *all
+  font: 'Sans 10'
+
+hp_label:
+  <<: *stat_labels
+  x: 10mm
+
+primary_attack_label:
+  <<: *stat_labels
+  x: 24mm
+
+secondary_attack_label:
+  <<: *stat_labels
+  x: 38mm
+
+special_attack_label:
+  <<: *stat_labels
+  x: 52mm
+
+hp:
+  <<: *stats
+  x: 10mm
+
+primary_attack:
+  <<: *stats
+  x: 25mm
+
+secondary_attack:
+  <<: *stats
+  x: 39mm
+
+special_attack:
+  <<: *stats
+  x: 53mm
