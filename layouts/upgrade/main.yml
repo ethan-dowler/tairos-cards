@@ -55,11 +55,11 @@ hp_label:
   <<: *stat_labels
   x: 10mm
 
-primary_attack_label:
+power_attack_label:
   <<: *stat_labels
   x: 24mm
 
-secondary_attack_label:
+normal_attack_label:
   <<: *stat_labels
   x: 38mm
 
@@ -71,11 +71,11 @@ hp:
   <<: *stats
   x: 10mm
 
-primary_attack:
+power_attack:
   <<: *stats
   x: 25mm
 
-secondary_attack:
+normal_attack:
   <<: *stats
   x: 39mm
 

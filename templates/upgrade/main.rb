@@ -91,14 +91,14 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards
 
   # STAT LABELS (if applicable)
   text layout: :hp_label,               str: "HP"
-  text layout: :primary_attack_label,   str: "PRI"
-  text layout: :secondary_attack_label, str: "SEC"
+  text layout: :power_attack_label,   str: "PRI"
+  text layout: :normal_attack_label, str: "SEC"
   text layout: :special_attack_label,   str: "SPE"
 
   # STATS (if applicable)
   text layout: :hp,               str: cards.map(&:hp)
-  text layout: :primary_attack,   str: cards.map(&:primary_attack)
-  text layout: :secondary_attack, str: cards.map(&:secondary_attack)
+  text layout: :power_attack,   str: cards.map(&:power_attack)
+  text layout: :normal_attack, str: cards.map(&:normal_attack)
   text layout: :special_attack,   str: cards.map(&:special_attack)
 
   # SAVE
