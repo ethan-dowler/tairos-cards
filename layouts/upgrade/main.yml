@@ -57,15 +57,15 @@ hp_label:
 
 power_attack_label:
   <<: *stat_labels
-  x: 24mm
+  x: 22mm
 
 normal_attack_label:
   <<: *stat_labels
-  x: 38mm
+  x: 37mm
 
 special_attack_label:
   <<: *stat_labels
-  x: 52mm
+  x: 51mm
 
 hp:
   <<: *stats
