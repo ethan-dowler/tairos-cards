@@ -62,11 +62,17 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards
 
   
   # UPGRADE POINTS LABELS (if applicable)
-  text layout: :upgrade_points_label, str: "UP"
+  upgrade_points_labels = cards.map do |card|
+    card.upgrade_points.nil? ? nil : "UP"
+  end
+  text layout: :upgrade_points_label, str: upgrade_points_labels
   text layout: :upgrade_points, str: cards.map(&:upgrade_points)
   
   # PLUS POINTS (if applicable)
-  text layout: :plus_points_label, str: "+P"
+  plus_points_labels = cards.map do |card|
+    card.upgrade_points.nil? ? nil : "+P"
+  end
+  text layout: :plus_points_label, str: plus_points_labels
   text layout: :plus_points, str: cards.map(&:plus_points)
 
   ## BODY - 4 lines
@@ -90,10 +96,23 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards
        y: first_line_y + (space_between_lines * 3)
 
   # STAT LABELS (if applicable)
-  text layout: :hp_label,               str: "HP"
-  text layout: :power_attack_label,   str: "POW"
-  text layout: :normal_attack_label, str: "NRM"
-  text layout: :special_attack_label,   str: "SPC"
+  hp_labels = cards.map do |card|
+    card.upgrade_points.nil? ? nil : "UP"
+  end
+  text layout: :hp_label, str: hp_labels
+
+  power_attack_labels = cards.map do |card|
+    card.upgrade_points.nil? ? nil : "POW"
+  end
+  text layout: :power_attack_label, str: power_attack_labels
+  normal_attack_labels = cards.map do |card|
+    card.upgrade_points.nil? ? nil : "NRM"
+  end
+  text layout: :normal_attack_label, str: normal_attack_labels
+  special_attack_labels = cards.map do |card|
+    card.upgrade_points.nil? ? nil : "SPC"
+  end
+  text layout: :special_attack_label, str: special_attack_labels
 
   # STATS (if applicable)
   text layout: :hp,               str: cards.map(&:hp)
