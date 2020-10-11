@@ -1,9 +1,7 @@
 require_relative "../base"
 
 # need to load cards to local var to allow hotloading while using guard
-units = YAML.load(File.read("data/upgrade/units.yml")).map { |card| OpenStruct.new(**card) }
-
-cards = units
+cards = YAML.load(File.read("data/upgrade/cards.yml")).map { |card| OpenStruct.new(**card) }
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards.length) do
   background color: cards.map(&:border_color)
