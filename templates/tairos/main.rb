@@ -34,7 +34,7 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.
        y: buffer
   
   ## TYPE
-  # Action/Reaction
+  # Action/Reaction/Free Action
   text layout: :type,
        str: cards.map(&:type),
        y: buffer,

@@ -1,7 +1,7 @@
 task default: [:main]
 
 task :main do
-  load 'templates/upgrade/main.rb'
+  load 'templates/tairos/main.rb'
 end
 
 namespace :tairos do

@@ -28,7 +28,6 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards
        y: buffer
   
   ## TYPE
-  # Action/Reaction
   text layout: :type,
        str: cards.map(&:type),
        y: buffer,
