@@ -10,7 +10,7 @@ devastations = YAML.load(File.read("data/tairos/devastations.yml")).map { |card|
 cards = (player_cards * 3) + enemies + artifacts + devastations + races
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.length) do
-  background color: cards.map(&:border_color)
+  background color: :white
 
   border_width = mm(3)
   border = Template.bleed + border_width
@@ -98,5 +98,5 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.
 
   # SAVE
   # save_png dir: "_output/tairos", prefix: cards.map(&:deck), count_format: cards.map(&:title)
-  save_pdf dir: "_output/tairos/pdf", file: "full_color.pdf"
+  save_pdf dir: "_output/tairos/pdf", file: "colorless.pdf"
 end

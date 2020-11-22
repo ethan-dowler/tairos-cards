@@ -8,9 +8,17 @@ namespace :tairos do
   task :main do
     load 'templates/tairos/main.rb'
   end
+
+  task :colorless do
+    load 'templates/tairos/colorless.rb'
+  end
   
   task :card_backs do
     load 'templates/tairos/card_back.rb'
+  end
+
+  task :colorless_card_backs do
+    load 'templates/tairos/colorless_card_back.rb'
   end
 end
 

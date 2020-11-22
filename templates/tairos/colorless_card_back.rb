@@ -5,7 +5,7 @@ card_backs = YAML.load(File.read("data/tairos/card_backs.yml")).map { |card| Ope
 cards = card_backs * 3
 
 Squib::Deck.new(**DECK_OPTIONS, cards: cards.length) do
-  background color: "#111"
+  background color: "white"
 
   border_width = mm(3)
   border = Template.bleed + border_width
@@ -17,18 +17,18 @@ Squib::Deck.new(**DECK_OPTIONS, cards: cards.length) do
   rect x: border, y: border,
        width: Card.width - (border_width * 2),
        height: Card.height - (border_width * 2),
-       fill_color: cards.map(&:background_color)
+       fill_color: "white"
 
 
   ## ICONS
   center_icons = cards.map do |card|
-    GameIcons.get(card.center_icon).recolor(fg: card.icon_color, bg: card.background_color).string
+    GameIcons.get(card.center_icon).recolor(fg: "#000", bg: "#fff").string
   end
   left_icons = cards.map do |card|
-    GameIcons.get(card.left_icon).recolor(fg: card.icon_color, bg: card.background_color).string
+    GameIcons.get(card.left_icon).recolor(fg: "#000", bg: "#fff").string
   end
   right_icons = cards.map do |card|
-    GameIcons.get(card.right_icon).recolor(fg: card.icon_color, bg: card.background_color).string
+    GameIcons.get(card.right_icon).recolor(fg: "#000", bg: "#fff").string
   end
 
   icon_size = mm(16)
@@ -56,6 +56,6 @@ Squib::Deck.new(**DECK_OPTIONS, cards: cards.length) do
       y: center_icon_y + left_right_icon_offset_y
 
   # SAVE
-  # save_png dir: "_output/tairos", prefix: cards.map(&:deck), count_format: "Card Back"
-  save_pdf dir: "_output/tairos/pdf", file: "card_backs.pdf"
+  # save_png dir: "_output/tairos/pdf", prefix: cards.map(&:deck), count_format: "Card Back"
+  save_pdf dir: "_output/tairos/pdf", file: "colorless_card_backs.pdf"
 end
