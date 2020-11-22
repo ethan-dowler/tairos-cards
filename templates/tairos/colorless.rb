@@ -97,6 +97,6 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.
   text layout: :attack, str: cards.map { |card| card.attack.nil? ? nil : "#{card.attack} ATK" }
 
   # SAVE
-  # save_png dir: "_output/tairos", prefix: cards.map(&:deck), count_format: cards.map(&:title)
+  # save_png dir: "_output/tairos/png", prefix: cards.map(&:deck), count_format: cards.map(&:title)
   save_pdf dir: "_output/tairos/pdf", file: "colorless.pdf"
 end

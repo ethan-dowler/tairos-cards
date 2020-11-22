@@ -56,6 +56,6 @@ Squib::Deck.new(**DECK_OPTIONS, cards: cards.length) do
       y: center_icon_y + left_right_icon_offset_y
 
   # SAVE
-  # save_png dir: "_output/tairos/pdf", prefix: cards.map(&:deck), count_format: "Card Back"
+  # save_png dir: "_output/tairos/png", prefix: cards.map(&:deck), count_format: "Card Back"
   save_pdf dir: "_output/tairos/pdf", file: "colorless_card_backs.pdf"
 end
