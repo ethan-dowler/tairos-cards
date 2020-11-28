@@ -2,7 +2,7 @@ require_relative "../base"
 
 # need to load cards to local var to allow hotloading while using guard
 card_backs = YAML.load(File.read("data/tairos/card_backs.yml")).map { |card| OpenStruct.new(**card) }
-cards = card_backs * 3
+cards = card_backs * 15
 
 Squib::Deck.new(**DECK_OPTIONS, cards: cards.length) do
   background color: "white"
