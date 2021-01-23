@@ -1,0 +1,40 @@
+## Starting Deck
+-
+  :deck: "money"
+  :title: "Single Bill"
+  :type: "Money"
+  :icon: "banknote"
+  :border_color: "#85bb65"
+  :line1: "Gain $1 to spend this round"
+  :line2: ""
+  :line3: ""
+  :line4: ""
+# TODO: other starting cards
+
+
+## Buy-able cards
+
+# Money
+-
+  :deck: "money"
+  :title: "Fistful of Dollars"
+  :type: "Money"
+  :icon: "take-my-money"
+  :border_color: "#85bb65"
+  :line1: "Gain $2 to spend this round"
+  :line2: ""
+  :line3: ""
+  :line4: ""
+-
+  :deck: "money"
+  :title: "Stacks on Stacks"
+  :type: "Money"
+  :icon: "money-stack"
+  :border_color: "#85bb65"
+  :line1: "Gain $3 to spend this round"
+  :line2: ""
+  :line3: ""
+  :line4: ""
+
+# TODO: Points
+# TODO: Actions

@@ -1,0 +1,31 @@
+all: &all
+  markup: true
+  color: black
+  x: 9mm
+  width: 51mm
+  align: left
+
+title:
+  <<: *all
+  font: 'Sans Semibold 12'
+
+type:
+  <<: *all
+  font: 'Sans Italic 10'
+
+
+body:
+  <<: *all
+  font: 'Sans 10'
+
+cost_label:
+  <<: *all
+  font: 'Sans Italic 8'
+  y: 75mm
+  x: 51mm
+
+cost:
+  <<: *all
+  font: 'Sans Semibold 16'
+  y: 80mm
+  x: 53mm

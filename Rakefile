@@ -1,7 +1,7 @@
 task default: [:main]
 
 task :main do
-  load 'templates/tairos/main.rb'
+  load 'templates/ramsey/main.rb'
 end
 
 namespace :tairos do
@@ -25,6 +25,12 @@ end
 namespace :upgrade do
   task :main do
     load 'templates/upgrade/main.rb'
+  end
+end
+
+namespace :ramsey do
+  task :main do
+    load 'templates/ramsey/main.rb'
   end
 end
 
