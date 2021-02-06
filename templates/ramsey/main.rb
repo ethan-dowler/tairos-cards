@@ -77,6 +77,14 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/ramsey/main.yml", cards: cards.
        str: cards.map(&:line4),
        y: first_line_y + (space_between_lines * 3)
 
+  text layout: :body,
+       str: cards.map(&:line5),
+       y: first_line_y + (space_between_lines * 4)
+
+  text layout: :body,
+       str: cards.map(&:line6),
+       y: first_line_y + (space_between_lines * 5)
+
   # Cost
   text layout: :cost_label, str: cards.map { |card| card.cost.nil? ? "" : "Cost" }
   text layout: :cost, str: cards.map(&:cost)
