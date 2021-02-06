@@ -110,7 +110,7 @@
   :line2: "Income: $3"
   :line3: ""
   :line4: "Whenever you spend time for"
-  :line5: "<b>Pay</b>, you may spend 1 extra"
+  :line5: "<b>Income</b>, you may spend 1 extra"
   :line6: "Hour to gain 1 LP."
 -
   :deck: "career"
@@ -118,7 +118,7 @@
   :type: "Career"
   :icon: "alarm-clock"
   :border_color: "#296E01"
-  :line1: "Time Cost: 1 Hours"
+  :line1: "Time Cost: 1 Hour"
   :line2: "Income: $1"
   :line3: ""
   :line4: "For every side-hustle you do"
