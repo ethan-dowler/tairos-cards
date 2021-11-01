@@ -1,7 +1,7 @@
 require_relative "../base"
 
 # need to load cards to local var to allow hotloading while using guard
-cards = YAML.load(File.read("data/upgrade/cards.yml")).map { |card| OpenStruct.new(**card) }
+cards = YAML.load(File.read("data/upgrade/cards2.yml")).map { |card| OpenStruct.new(**card) }
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards.length) do
   background color: cards.map(&:border_color)
@@ -67,7 +67,7 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards
   
   # PLUS POINTS (if applicable)
   plus_points_labels = cards.map do |card|
-    card.upgrade_points.nil? ? nil : "+P"
+    card.plus_points.nil? ? nil : "+P"
   end
   text layout: :plus_points_label, str: plus_points_labels
   text layout: :plus_points, str: cards.map(&:plus_points)
@@ -94,20 +94,20 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards
 
   # STAT LABELS (if applicable)
   hp_labels = cards.map do |card|
-    card.upgrade_points.nil? ? nil : "UP"
+    card.hp.nil? ? nil : "HP"
   end
   text layout: :hp_label, str: hp_labels
 
   power_attack_labels = cards.map do |card|
-    card.upgrade_points.nil? ? nil : "POW"
+    card.power_attack.nil? ? nil : "POW"
   end
   text layout: :power_attack_label, str: power_attack_labels
   normal_attack_labels = cards.map do |card|
-    card.upgrade_points.nil? ? nil : "NRM"
+    card.normal_attack.nil? ? nil : "NRM"
   end
   text layout: :normal_attack_label, str: normal_attack_labels
   special_attack_labels = cards.map do |card|
-    card.upgrade_points.nil? ? nil : "SPC"
+    card.special_attack.nil? ? nil : "SPC"
   end
   text layout: :special_attack_label, str: special_attack_labels
 
