@@ -118,6 +118,6 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/upgrade/main.yml", cards: cards
   text layout: :special_attack,   str: cards.map(&:special_attack)
 
   # SAVE
-  save_png dir: "_output/upgrade", prefix: cards.map(&:deck), count_format: cards.map(&:title)
-  # save_pdf dir: "_output/upgrade", prefix: cards.map(&:deck), count_format: cards.map(&:title)
+  # save_png dir: "_output/upgrade", prefix: cards.map(&:deck), count_format: cards.map(&:title)
+  save_pdf dir: "_output/upgrade", prefix: cards.map(&:deck), count_format: cards.map(&:title)
 end
