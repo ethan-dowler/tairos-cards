@@ -28,6 +28,12 @@ namespace :upgrade do
   end
 end
 
+namespace :princess do
+  task :main do
+    load 'templates/princess/main.rb'
+  end
+end
+
 task :guard do
   sh "bundle exec guard -c"
 end
