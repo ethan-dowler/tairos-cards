@@ -98,7 +98,7 @@
   :deck: "Artifact"
   :title: "Golden Hourglass"
   :type: "Artifact"
-  :icon: "" # TODO
+  :icon: "battle-axe" # TODO
   :border_color: "#b95"
   :line1: "<i>Free Action</i> - 5 Charges"
   :line2: ""
@@ -110,7 +110,7 @@
   :deck: "Artifact"
   :title: "Enigmatic Device"
   :type: "Artifact"
-  :icon: "" # TODO
+  :icon: "battle-axe" # TODO
   :border_color: "#b95"
   :line1: "<i>Free Action</i> - 3 Charges"
   :line2: ""

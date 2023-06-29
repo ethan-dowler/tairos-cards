@@ -99,7 +99,7 @@
   :deck: "Enemy"
   :title: "Black Guard"
   :type: "Enemy"
-  :icon: "" # TODO
+  :icon: "battle-axe" # TODO
   :border_color: "#444"
   :hp: "18"
   :attack: "2"
@@ -111,7 +111,7 @@
   :deck: "Enemy"
   :title: "Flamespitter"
   :type: "Enemy"
-  :icon: "" # TODO
+  :icon: "battle-axe" # TODO
   :border_color: "#444"
   :hp: "12"
   :attack: "2"
@@ -123,7 +123,7 @@
   :deck: "Enemy"
   :title: "Voidling"
   :type: "Enemy"
-  :icon: "" # TODO
+  :icon: "battle-axe" # TODO
   :border_color: "#444"
   :hp: "12"
   :attack: "4"
@@ -160,7 +160,7 @@
   :deck: "Enemy"
   :title: "Warlord"
   :type: "Greater Enemy"
-  :icon: "" # TODO
+  :icon: "battle-axe" # TODO
   :border_color: "#444"
   :hp: "20"
   :attack: "5"
