@@ -17,8 +17,8 @@
   :deck: Elementalist
   :background_color: "#0ff"
   :icon_color: "#111"
-  :center_icon: electric
-  :left_icon: flamer
+  :center_icon: flamer
+  :left_icon: electric
   :right_icon: beveled-star
 -
   :deck: Tactician
