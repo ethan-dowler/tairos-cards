@@ -8,11 +8,11 @@
   :icon: "battle-axe"
   :border_color: "#b10"
   :line1: "<b>Attack 3</b>"
-  :line2: "If you target an enemy who"
-  :line3: "attacked you this round,"
-  :line4: "add <b>+2 Attack</b>."
-  :line5: "<b>Combo</b>: <i>Cleave</i>"
-  :line6: "<b>Attack 3</b> (an adjacent enemy)."
+  :line2: "If the target attacked you"
+  :line3: "this round, <b>+2 Attack</b>."
+  :line4: "<b>Combo</b>: <i>Cleave</i>"
+  :line5: "<b>Attack 3</b>"
+  :line6: "(targeting an adjacent enemy)"
 -
   :deck: "Guardian"
   :title: "Defend"
@@ -22,7 +22,7 @@
   :line1: "Play when an enemy attacks."
   :line2: "<b>Block 2</b>"
   :line3: "If you are the target of"
-  :line4: "the attack, add <b>+1 Block</b>."
+  :line4: "the attack, <b>+1 Block</b>."
   :line5: "If not, you may become"
   :line6: "the target."
 -
@@ -47,25 +47,25 @@
   :border_color: "#ccc"
   :line1: "<b>Attack 3</b>"
   :line2: "If you've taken no damage"
-  :line3: "this round, add <b>+2 Attack</b>."
+  :line3: "this round, <b>+2 Attack</b>."
   :line4: "<b>Combo</b>: <i>Volley</i>"
   :line5: "<b>Attack All 2</b>"
   :line6: ""
 -
   :deck: "Bowmaster"
   :title: "Dodge"
-  :type: "Free Action"
+  :type: "Reaction"
   :icon: "dodging"
   :border_color: "#ccc"
-  :line1: "<b>Block Self 2</b> and/or"
-  :line2: "Prevent 1 status effect from"
-  :line3: "being applied to you."
+  :line1: "Play when you are targeted."
+  :line2: "<b>Block 2</b> and/or"
+  :line3: "prevent 1 status effect."
   :line4: "<b>Combo</b>: <i>Evade</i>"
-  :line5: "Prevent ALL damage and effects"
-  :line6: "to you from one source."
+  :line5: "Prevent ALL damage and"
+  :line6: "effects."
 -
   :deck: "Bowmaster"
-  :title: "Hasten"
+  :title: "Dash"
   :type: "Action"
   :icon: "wingfoot"
   :border_color: "#ccc"
@@ -84,10 +84,10 @@
   :icon: "flamer"
   :border_color: "#0ff"
   :line1: "<b>Attack 3</b>"
-  :line2: "Give the next attack on"
-  :line3: "this enemy <b>+2 Attack</b>."
-  :line4: "<b>Combo</b>: <i>Flashfire</i>"
-  :line5: "Add <b>+2 Attack</b> and <b>Draw 1</b>"
+  :line2: "The next attack on this"
+  :line3: "enemy gains <b>+2 Attack</b>."
+  :line4: "<b>Combo</b>: <i>Flare</i>"
+  :line5: "<b>+2 Attack</b> and <b>Draw 1</b>"
   :line6: ""
 -
   :deck: "Elementalist"
@@ -96,11 +96,11 @@
   :icon: "beveled-star"
   :border_color: "#0ff"
   :line1: "<b>Attack 3</b>"
-  :line2: "You may ignore any <b>Hunter</b>"
-  :line3: "ability on this enemy next round."
-  :line4: "<b>Combo</b>: <i>Freeze</i>"
-  :line5: "<b>Stun</b> the target."
-  :line6: ""
+  :line2: "Ignore <b>Block</b> and <b>Hunter</b>"
+  :line3: "abilities on this enemy until"
+  :line4: "the end of your next turn."
+  :line5: "<b>Combo</b>: <i>Freeze</i>"
+  :line6: "<b>Stun</b> the target."
 -
   :deck: "Elementalist"
   :title: "Shock"
@@ -109,10 +109,10 @@
   :border_color: "#0ff"
   :line1: "Play when you are attacked."
   :line2: "<b>Block 1</b> and <b>Attack 2</b>"
-  :line3: "(target your attacker)."
-  :line4: "<b>Combo</b>: <i>Channel</i>"
+  :line3: "(target your attacker)"
+  :line4: "<b>Combo</b>: <i>Conduct</i>"
   :line5: "Charge this card and"
-  :line6: "the card you played it with."
+  :line6: "the card you played with it."
 
 # Tactician - GREEN
 -
@@ -150,7 +150,7 @@
   :line3: "(target the same enemy)"
   :line4: "If another ally attacked"
   :line5: "the target this round,"
-  :line6: "add <b>+2 Attack</b>."
+  :line6: "<b>+3 Attack</b>."
 
 ## SET TWO
 
@@ -163,8 +163,8 @@
   :border_color: "#f31"
   :line1: "<b>Attack 5</b>"
   :line2: "You suffer 1 damage."
-  :line3: "You may gain <b>Fatigue</b> to"
-  :line4: "add <b>+2 Attack</b>."
+  :line3: "You may gain <b>Fatigue</b>"
+  :line4: "to gain <b>+2 Attack</b>."
   :line5: "<b>Combo</b>: <i>Takedown</i>"
   :line6: "<b>Stun</b> the target."
 -
@@ -174,11 +174,11 @@
   :icon: "punch-blast"
   :border_color: "#f31"
   :line1: "<b>Attack 2</b> <i>Multi-target</i>"
-  :line2: "<b>Mill</b> up to 3 cards to add"
+  :line2: "<b>Mill</b> up to 3 cards:"
   :line3: "<b>+1 Attack</b> per card."
-  :line4: "<b>Combo</b>: TODO"
-  :line5: "<b>Mill</b> up to 2 more cards to"
-  :line6: "add <b>+2 Attack</b> per card."
+  :line4: "<b>Combo</b>: Combo Finisher"
+  :line5: "<b>Mill</b> up to 2 more cards:"
+  :line6: "<b>+2 Attack</b> per card."
 -
   :deck: "Brawler"
   :title: "Counter"
@@ -212,7 +212,7 @@
   :icon: "avoidance"
   :border_color: "#666"
   :line1: "Play when you are attacked."
-  :line2: "<b>Block Self 2</b>"
+  :line2: "<b>Block 2</b>"
   :line3: "<b>Attack 2</b>"
   :line4: "(target a different enemy)"
   :line5: ""
@@ -251,9 +251,9 @@
   :border_color: "#02f"
   :line1: "Play when an enemy attacks."
   :line2: "<b>Block 2</b> <i>multi-target</i>"
-  :line3: "You may discard up to 2"
-  :line4: "cards to add <b>+2 Block</b>"
-  :line5: "per card."
+  :line3: "You may discard up to 2 cards:"
+  :line4: "<b>+2 Block</b> per card."
+  :line5: ""
   :line6: ""
 -
   :deck: "Arcanist"
@@ -262,11 +262,11 @@
   :icon: "glowing-hands"
   :border_color: "#02f"
   :line1: "<b>Attack 2</b> <i>multi-target</i>"
-  :line2: "You may discard up to 2 cards"
-  :line3: "to add <b>+3 Attack</b> per card."
+  :line2: "You may discard up to 2 cards:"
+  :line3: "<b>+3 Attack</b> per card."
   :line4: "<b>Combo:</b> <i>Exhaust</i>"
   :line5: "You may suffer 2 damage and"
-  :line6: "gain <b>Fatigue</b> to add <b>+5 Attack</b>"
+  :line6: "gain <b>Fatigue</b> to gain <b>+5 Attack</b>."
 
 # Squire - GREEN
 -
@@ -280,7 +280,7 @@
   :line3: "<b>Block 1</b>"
   :line4: "<b>Draw 1</b>"
   :line5: "<b>Attack 1</b>"
-  :line6: "(target the triggering enemy)"
+  :line6: "(target the attacking enemy)"
 -
   :deck: "Squirother"
   :title: "Fetch"
@@ -308,9 +308,9 @@
 
 ## SET THREE
 
-# Mauler - RED
+# Juggernaut - RED
 -
-  :deck: "Mauler"
+  :deck: "Juggernaut"
   :title: "Crush"
   :type: "Action"
   :icon: "battle-axe" # TODO
@@ -319,32 +319,32 @@
   :line2: "This attack ignores <b>Block</b>."
   :line3: ""
   :line4: "<b>Combo</b>: <i>Pulverize</i>"
-  :line5: "Add <b>+4 Attack</b>"
+  :line5: "<b>+4 Attack</b>"
   :line6: ""
 -
-  :deck: "Mauler"
+  :deck: "Juggernaut"
   :title: "Endure"
   :type: "Reaction"
   :icon: "battle-axe" # TODO
   :border_color: "#b10"
-  :line1: "<b>Block Self 2</b>"
-  :line2: "If you have ≤ 5 HP, add <b>+1 Block</b>."
-  :line3: ""
+  :line1: "Play when you are attacked."
+  :line2: "<b>Block 2</b>"
+  :line3: "If you have ≤ 5 HP, <b>+1 Block</b>."
   :line4: "<b>Combo</b>: <i>Absorb</i>"
   :line5: "<b>Draw 2</b>"
   :line6: ""
 -
-  :deck: "Mauler"
+  :deck: "Juggernaut"
   :title: "Focus"
-  :type: "Free Action"
+  :type: "Reaction"
   :icon: "battle-axe" # TODO
   :border_color: "#b10"
-  :line1: "<b>Restore Self 1</b>"
-  :line2: "<b>Draw 1</b>"
-  :line3: "You may shuffle two of your"
-  :line4: "discarded cards other than"
-  :line5: "<i>Focus</i> into their deck."
-  :line6: ""
+  :line1: "Play at the start of your turn."
+  :line2: "<b>Restore Self 1</b>"
+  :line3: "<b>Draw 1</b>"
+  :line4: "You may shuffle two of your"
+  :line5: "discarded cards other than"
+  :line6: "<i>Focus</i> into their deck."
 
 # Jackknife - BLACK
 -
@@ -369,8 +369,8 @@
   :line2: "<b>Draw 1</b>"
   :line3: "You may take another <b>Action</b>."
   :line4: "<b>Combo</b>: <i>Rend</i>"
-  :line5: "TODO"
-  :line6: ""
+  :line5: "<b>Tuck</b>: All attacks against this"
+  :line6: "enemy gain <b>+1 Attack</b>."
 -
   :deck: "Jackknife"
   :title: "Reposition"
@@ -392,11 +392,11 @@
   :icon: "battle-axe" # TODO
   :border_color: "#02f"
   :line1: "<b>Attack 3</b>"
-  :line2: "If the target has ≤ 10 HP"
-  :line3: "Add <b>+2 Attack</b>."
+  :line2: "If the target has ≤ 10 HP,"
+  :line3: "<b>+2 Attack</b>."
   :line4: "<b>Combo</b>: <i>Terrorize</i>"
-  :line5: "If the target has ≤ 10 HP"
-  :line6: "add <b>Stun</b> to the attack."
+  :line5: "<b>Stun</b> the target."
+  :line6: ""
 -
   :deck: "Illusionist"
   :title: "Charm"
@@ -404,7 +404,7 @@
   :icon: "battle-axe" # TODO
   :border_color: "#02f"
   :line1: "Play when you are attacked."
-  :line2: "<b>Block Self 1</b>"
+  :line2: "<b>Block 1</b> and <b>Draw 1</b>"
   :line3: ""
   :line4: "<b>Combo</b>: <i>Confuse</i>"
   :line5: "Your attacker attacks another"
@@ -412,7 +412,7 @@
 -
   :deck: "Illusionist"
   :title: "Duplicate"
-  :type: ""
+  :type: "???"
   :icon: "battle-axe" # TODO
   :border_color: "#02f"
   :line1: "Copy a card that was"
@@ -422,19 +422,19 @@
   :line5: "plays a card to trigger its"
   :line6: "<b>Combo</b> if they did not."
 
-# Apothecary
+# Apothecary - GREEN
 -
   :deck: "Apothecary"
   :title: "Contaminate"
   :type: "Action"
   :icon: "battle-axe" # TODO
   :border_color: "#4d4"
-  :line1: "Add <b>+4 Attack</b> to the next"
-  :line2: "attack on target enemy"
-  :line3: "this round."
+  :line1: "Choose an enemy."
+  :line2: "The next attack on that enemy"
+  :line3: "gains <b>+4 Attack</b>."
   :line4: "<b>Combo</b>: <i>Melt</i>"
-  :line5: "Remove all text from one"
-  :line6: "non-elite enemy."
+  :line5: "Remove all text from that"
+  :line6: "enemy if it is not elite."
 -
   :deck: "Apothecary"
   :title: "Heal"
@@ -457,8 +457,8 @@
   :line2: "<b>Draw 2</b> <i>from other</i>"
   :line3: "<i>players' decks</i>"
   :line4: "You may take another <b>Action</b>."
-  :line5: "<i>You cannot Mix more than</i>"
-  :line6: "<i>once per Round.</i>"
+  :line5: "<i>once per round</i>"
+  :line6: ""
 
 ## SET FOUR
 
@@ -508,11 +508,11 @@
   :icon: "bee"
   :border_color: "#ccc"
   :line1: "<b>Attack 2</b>"
-  :line2: "Tuck this card under the target."
-  :line3: "At the start of each round,"
-  :line4: "that enemy suffers 2 damage."
-  :line5: "<b>Combo</b>: <i>Swarm</i>"
-  :line6: "<b>+3 Attack</b>"
+  :line2: "<b>Tuck</b>: At the start of each round"
+  :line3: "this enemy suffers 2 damage."
+  :line4: "<b>Combo</b>: <i>Swarm</i>"
+  :line5: "<b>Tuck</b>: This enemy has <b>-1 Attack</b>"
+  :line6: "and loses all <b>Block</b>."
 -
   :deck: "Swarmkeeper"
   :title: "Mosquito / Bite"
@@ -534,8 +534,8 @@
   :line1: "Play when an enemy attacks."
   :line2: "<b>Block 1</b>"
   :line3: "Anyone may become the target."
-  :line4: "<b>Combo</i>: <i>Wrap</i>"
-  :line5: "<b>Stun</b> the triggering enemy"
+  :line4: "<b>Combo</b>: <i>Wrap</i>"
+  :line5: "<b>Stun</b> the attacking enemy"
   :line6: "for this attack."
 
 # Artificer - BLUE
@@ -545,7 +545,7 @@
   :type: "Action"
   :icon: "battle-axe" # TODO
   :border_color: "#02f"
-  :line1: "<b>Attack 2</b>,"
+  :line1: "<b>Attack 2</b>"
   :line2: "You may <b>Charge</b> this card."
   :line3: ""
   :line4: "<b>Combo</b>: <i>Accelerate</i>"
@@ -558,11 +558,11 @@
   :icon: "battle-axe" # TODO
   :border_color: "#02f"
   :line1: "Play when you are attacked."
-  :line2: "<b>Block Self 1</b>"
+  :line2: "<b>Block 1</b>"
   :line3: "You may <b>Charge</b> this card."
   :line4: "<b>Combo</b>: <i>Learn</i>"
-  :line5: "Gain your attacker's card"
-  :line6: "text this round."
+  :line5: "Gain your attacker's abilities"
+  :line6: "this round."
 -
   :deck: "Artificer"
   :title: "Tinker"
@@ -576,3 +576,40 @@
   :line5: "Gain an unused artifact."
   :line6: ""
 
+# TODO - GREEN
+-
+  :deck: "TODO"
+  :title: "TODO"
+  :type: "TODO"
+  :icon: "battle-axe" # TODO
+  :border_color: "#4d4"
+  :line1: "TODO"
+  :line2: ""
+  :line3: ""
+  :line4: ""
+  :line5: ""
+  :line6: ""
+-
+  :deck: "TODO"
+  :title: "TODO"
+  :type: "TODO"
+  :icon: "battle-axe" # TODO
+  :border_color: "#4d4"
+  :line1: "TODO"
+  :line2: ""
+  :line3: ""
+  :line4: ""
+  :line5: ""
+  :line6: ""
+-
+  :deck: "TODO"
+  :title: "TODO"
+  :type: "TODO"
+  :icon: "battle-axe" # TODO
+  :border_color: "#4d4"
+  :line1: "TODO"
+  :line2: ""
+  :line3: ""
+  :line4: ""
+  :line5: ""
+  :line6: ""
