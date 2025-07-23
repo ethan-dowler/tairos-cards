@@ -34,7 +34,7 @@
   :border_color: "#81e"
   :line1: "<i>Game Start</i>: <b>+4 Health</b>"
   :line2: "<i>Passive</i>"
-  :line3: "You cannot be stunned or fatigued."
+  :line3: "Ignore enemy <b>Discard</b> effects."
   :line4: "<i>Free Action</i> - 1 Charge"
   :line5: "<b>+1 Attack</b> or <b>+1 Block</b>"
   :line6: "<i>once per turn</i>"

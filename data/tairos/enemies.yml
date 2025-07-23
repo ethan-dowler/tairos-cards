@@ -8,8 +8,8 @@
   :hp: "12"
   :attack: "4"
   :line1: "When <i>Toxic Toad</i> is defeated,"
-  :line2: "the player it is engaged with"
-  :line3: "gains <b>Stun</b>."
+  :line2: "the player it's engaged with"
+  :line3: "must <b>Discard 2</b>."
   :line4: ""
 -
   :deck: "Enemy"
