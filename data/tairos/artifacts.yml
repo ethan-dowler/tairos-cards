@@ -68,7 +68,7 @@
   :line2: "Name a card."
   :line3: "<b>Scry 3</b>"
   :line4: "If you see the named card,"
-  :line5: "you may play it for free."
+  :line5: "you may play it immediately."
   :line6: ""
 -
   :deck: "Artifact"

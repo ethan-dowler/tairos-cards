@@ -303,7 +303,7 @@
   :line2: "You may take another <b>Action</b>."
   :line3: "<i>once per round</i>"
   :line4: "<b>Combo</b>: <i>Gather</i>"
-  :line5: "Target ally may refresh"
+  :line5: "Target ally may <b>Refresh</b>"
   :line6: "one of their decks."
 
 ## SET THREE
@@ -588,7 +588,7 @@
   :line3: "<i>Wasp / Sting</i> in your discard"
   :line4: "piles."
   :line5: "<b>Combo</b>: <i>Swarm</i>"
-  :line6: "Refresh one of your decks."
+  :line6: "<b>Refresh</b> one of your decks."
 -
   :deck: "Swarmkeeper"
   :title: "Mosquito / Bite"
