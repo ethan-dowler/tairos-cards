@@ -543,7 +543,7 @@
   :deck: "Artificer"
   :title: "Embue"
   :type: "Action"
-  :icon: "battle-axe" # TODO
+  :icon: "magic-swirl"
   :border_color: "#02f"
   :line1: "<b>Attack 2</b>"
   :line2: "<b>Charge</b> this card."
@@ -555,24 +555,24 @@
   :deck: "Artificer"
   :title: "Observe"
   :type: "Reaction"
-  :icon: "battle-axe" # TODO
+  :icon: "steampunk-goggles"
   :border_color: "#02f"
   :line1: "Play when you are attacked."
   :line2: "<b>Block 1</b>"
   :line3: "<b>Charge</b> this card."
   :line4: "<b>Combo</b>: <i>Learn</i>"
-  :line5: "Gain your attacker's abilities"
-  :line6: "this round."
+  :line5: "You are immune to damage"
+  :line6: "from the attacker next round."
 -
   :deck: "Artificer"
   :title: "Tinker"
   :type: "Action"
-  :icon: "battle-axe" # TODO
+  :icon: "anvil-impact"
   :border_color: "#02f"
   :line1: "<b>Scry 3</b>"
   :line2: "<b>Restore Self 1</b>"
   :line3: "You may swap your artifact"
-  :line4: "for an unused one."
+  :line4: "with an unused one."
   :line5: "<b>Combo</b>: Construct"
   :line6: "Gain an unused artifact."
 
@@ -588,7 +588,7 @@
   :line3: "<i>Wasp / Sting</i> in your discard"
   :line4: "piles."
   :line5: "<b>Combo</b>: <i>Swarm</i>"
-  :line6: "<b>Refresh</b> one of your decks."
+  :line6: "<b>Refresh</b> ANY player deck."
 -
   :deck: "Swarmkeeper"
   :title: "Mosquito / Bite"
