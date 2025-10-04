@@ -19,8 +19,8 @@
   :line1: "<i>Game Start</i>: <b>Charge 2</b>"
   :line2: "<i>Magical</i> — Passive"
   :line3: "After you <b>Combo</b>, <b>Charge 1</b>."
-  :line4: "<i>TODO</i> — 1 Charge"
-  :line5: ""
+  :line4: "<i>Detect</i> — 1 Charge"
+  :line5: "<b>Scry 1</b> on the Enemy Deck."
   :line6: "<i>once per turn</i>"
 -
   :deck: "Race"
