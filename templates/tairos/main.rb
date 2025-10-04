@@ -7,8 +7,8 @@ artifacts = YAML.load(File.read("data/tairos/artifacts.yml")).map { |card| OpenS
 enemies = YAML.load(File.read("data/tairos/enemies.yml")).map { |card| OpenStruct.new(**card) }
 devastations = YAML.load(File.read("data/tairos/devastations.yml")).map { |card| OpenStruct.new(**card) }
 
-cards = (player_cards * 4) + enemies + artifacts + races #+ devastations
-# cards = races
+# cards = (player_cards * 4) + enemies + artifacts + races + devastations
+cards = (player_cards * 4)
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.length) do
   background color: cards.map(&:border_color)
