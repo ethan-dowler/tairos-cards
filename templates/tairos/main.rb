@@ -1,13 +1,14 @@
 require_relative "../base"
 
 # need to load cards to local var to allow hotloading while using guard
-player_cards = YAML.load(File.read("data/tairos/player_cards.yml")).map { |card| OpenStruct.new(**card) }
+player_cards = YAML.load(File.read("data/tairos/player_cards_subset.yml")).map { |card| OpenStruct.new(**card) }
 races = YAML.load(File.read("data/tairos/races.yml")).map { |card| OpenStruct.new(**card) }
 artifacts = YAML.load(File.read("data/tairos/artifacts.yml")).map { |card| OpenStruct.new(**card) }
 enemies = YAML.load(File.read("data/tairos/enemies.yml")).map { |card| OpenStruct.new(**card) }
 # devastations = YAML.load(File.read("data/tairos/devastations.yml")).map { |card| OpenStruct.new(**card) }
 
-cards = (player_cards * 4) + enemies + artifacts + races #+ devastations
+# cards = (player_cards * 4) + enemies + artifacts + races #+ devastations
+cards = player_cards * 4
 
 Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.length) do
   background color: cards.map(&:border_color)
@@ -46,9 +47,12 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.
        y2: mm(14)
   
   
-  ## CENTER ICON
+  ## CENTER ICON/IMAGE
   center_icons = cards.map do |card|
-    GameIcons.get(card.icon).recolor(fg: '000', bg: 'fff').string
+    card.icon.nil? ? nil : GameIcons.get(card.icon).recolor(fg: '000', bg: 'fff').string
+  end
+  center_images = cards.map do |card|
+    card.image.nil? ? nil : "images/tairos/#{card.image}.png"
   end
 
   center_icon_size = mm(32)
@@ -58,6 +62,13 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.
     x: (Card.width + border_width - center_icon_size) / 2,
     y: mm(18)
 
+  center_image_size = mm(36)
+  png file: center_images,
+    width: center_image_size,
+    height: center_image_size,
+    x: (Card.width + border_width - center_image_size) / 2,
+    y: mm(16)
+
 
   line x1: buffer,
       x2: Template.width - buffer,
@@ -65,9 +76,15 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.
       y2: mm(56)
 
   ## BODY
+  # TODO: try embedding icons
+  # => https://squib.readthedocs.io/en/v0.19.0/text_feature.html?highlight=image#embedding-images
   first_line_y = mm(58)
   space_between_lines = mm(5)
   
+  # text(str: 'Gain 1 :health:') do |embed|
+  #   embed.svg key: ':health:', file: 'heart.svg'
+  # end
+
   text layout: :body,
        str: cards.map(&:line1),
        y: first_line_y
@@ -92,7 +109,8 @@ Squib::Deck.new(**DECK_OPTIONS, layout: "layouts/tairos/main.yml", cards: cards.
        str: cards.map(&:line6),
        y: first_line_y + (space_between_lines * 5)
 
-  # MONSTER ICONS (if applicable)
+  # MONSTER STATS (if applicable)
+  text layout: :player_count, str: cards.map { |card| card.player_count.nil? ? nil : Array.new(card.player_count).reduce('') { |acc, c| "|#{acc}" } }
   text layout: :hp, str: cards.map { |card| card.hp.nil? ? nil : "HP #{card.hp}" }
   text layout: :attack, str: cards.map { |card| card.attack.nil? ? nil : "#{card.attack} ATK" }
 

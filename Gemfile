@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "game_icons"    # TODO: see if this will help
+gem "game_icons"
 gem "guard"
 gem "guard-rake"
 gem "rake"

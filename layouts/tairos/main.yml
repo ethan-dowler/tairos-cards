@@ -17,6 +17,12 @@ body:
   <<: *all
   font: 'Sans 10'
 
+player_count:
+  <<: *all
+  font: 'Sans Bold 10'
+  align: left
+  y: 15mm
+
 monster_stats: &monster_stats
   <<: *all
   font: 'Sans Semibold 18'
